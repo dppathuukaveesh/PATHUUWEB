@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDJ Cream - Unlock Your True Radiance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kdj-gold': '#D4AF37',
+                        'kdj-cream': '#F9F5F0',
+                        'kdj-dark': '#1A1A1A',
+                        'kdj-muted': '#8C8C8C',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans text-kdj-dark bg-kdj-cream selection:bg-kdj-gold selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-nav" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-3xl font-serif font-bold text-kdj-dark tracking-tighter">
+                        KDJ<span class="text-kdj-gold">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-kdj-dark hover:text-kdj-gold px-3 py-2 text-sm font-medium transition-colors uppercase tracking-widest">Home</a>
+                    <a href="products.html" class="text-kdj-dark hover:text-kdj-gold px-3 py-2 text-sm font-medium transition-colors uppercase tracking-widest">Shop</a>
+                    <a href="about.html" class="text-kdj-dark hover:text-kdj-gold px-3 py-2 text-sm font-medium transition-colors uppercase tracking-widest">Our Story</a>
+                    <a href="contact.html" class="text-kdj-dark hover:text-kdj-gold px-3 py-2 text-sm font-medium transition-colors uppercase tracking-widest">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-kdj-dark hover:text-kdj-gold transition-colors"><i class="fas fa-search text-lg"></i></a>
+                    <a href="#" class="text-kdj-dark hover:text-kdj-gold transition-colors relative">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                        <span class="absolute -top-1 -right-2 bg-kdj-gold text-white text-xs font-bold px-1.5 py-0.5 rounded-full">0</span>
+                    </a>
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-btn" class="text-kdj-dark hover:text-kdj-gold focus:outline-none">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white border-t border-gray-100" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-kdj-dark hover:text-kdj-gold hover:bg-gray-50 uppercase tracking-wider">Home</a>
+                <a href="products.html" class="block px-3 py-2 text-base font-medium text-kdj-dark hover:text-kdj-gold hover:bg-gray-50 uppercase tracking-wider">Shop</a>
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-kdj-dark hover:text-kdj-gold hover:bg-gray-50 uppercase tracking-wider">Our Story</a>
+                <a href="contact.html" class="block px-3 py-2 text-base font-medium text-kdj-dark hover:text-kdj-gold hover:bg-gray-50 uppercase tracking-wider">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center hero-bg text-center px-4">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="relative z-10 max-w-4xl mx-auto opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards]">
+            <span class="text-white uppercase tracking-[0.3em] text-sm md:text-base mb-4 block font-medium">Luxury Skincare Redefined</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-tight">
+                Glow with<br><span class="text-kdj-gold italic">Confidence</span>
+            </h1>
+            <p class="text-gray-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+                Discover the secret to timeless beauty with KDJ Cream. Enriched with nature's finest ingredients for radiant, youthful skin.
+            </p>
+            <a href="products.html" class="inline-block bg-kdj-gold text-white px-10 py-4 font-semibold uppercase tracking-widest hover:bg-white hover:text-kdj-gold transition-all duration-300 transform hover:-translate-y-1 shadow-lg">
+                Shop Collection
+            </a>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#features" class="text-white hover:text-kdj-gold transition-colors">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-kdj-dark mb-4">Why Choose KDJ Cream?</h2>
+                <div class="w-24 h-1 bg-kdj-gold mx-auto mb-6"></div>
+                <p class="text-kdj-muted max-w-xl mx-auto">Scientifically formulated to nourish, protect, and rejuvenate your skin.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="p-8 hover:shadow-xl transition-shadow duration-300 rounded-lg bg-kdj-cream/30 group">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md text-kdj-gold text-2xl group-hover:bg-kdj-gold group-hover:text-white transition-colors">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-3">100% Organic</h3>
+                    <p class="text-kdj-muted leading-relaxed">Sourced from the finest natural ingredients, free from harmful parabens and sulfates.</p>
+                </div>
+                <div class="p-8 hover:shadow-xl transition-shadow duration-300 rounded-lg bg-kdj-cream/30 group">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md text-kdj-gold text-2xl group-hover:bg-kdj-gold group-hover:text-white transition-colors">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-3">Deep Hydration</h3>
+                    <p class="text-kdj-muted leading-relaxed">Penetrates deep into the skin layers to provide 24-hour long-lasting moisture.</p>
+                </div>
+                <div class="p-8 hover:shadow-xl transition-shadow duration-300 rounded-lg bg-kdj-cream/30 group">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md text-kdj-gold text-2xl group-hover:bg-kdj-gold group-hover:text-white transition-colors">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold mb-3">Instant Glow</h3>
+                    <p class="text-kdj-muted leading-relaxed">Experience a visible radiance from the very first application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Product Section -->
+    <section class="py-24 bg-kdj-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-full h-full border-2 border-kdj-gold rounded-lg transform translate-x-4 translate-y-4"></div>
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1887&auto=format&fit=crop" alt="KDJ Signature Cream" class="relative rounded-lg shadow-2xl w-full object-cover h-[500px]">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <span class="text-kdj-gold uppercase tracking-widest font-semibold text-sm mb-2 block">Best Seller</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-kdj-dark mb-6">Signature Night Repair</h2>
+                    <p class="text-kdj-muted text-lg mb-8 leading-relaxed">
+                        Wake up to transformed skin. Our signature formula works overnight to repair and rejuvenate, reducing fine lines and restoring elasticity. Infused with gold particles and rare botanical extracts.
+                    </p>
+                    <div class="flex items-center gap-6 mb-8">
+                        <span class="text-3xl font-serif text-kdj-dark font-bold">$49.99</span>
+                        <div class="flex text-kdj-gold text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="text-kdj-muted ml-2">(120+ Reviews)</span>
+                        </div>
+                    </div>
+                    <a href="products.html" class="inline-block bg-kdj-dark text-white px-8 py-3.5 font-semibold uppercase tracking-widest hover:bg-kdj-gold transition-colors duration-300">
+                        Add to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax / Quote Section -->
+    <section class="py-32 relative bg-fixed bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+            <i class="fas fa-quote-left text-4xl text-kdj-gold mb-6 opacity-80"></i>
+            <h2 class="text-3xl md:text-5xl font-serif text-white leading-snug italic mb-8">
+                "Beauty is about being comfortable in your own skin. It's about knowing and accepting who you are."
+            </h2>
+            <cite class="text-kdj-gold text-xl font-medium tracking-wide not-italic">— KDJ Philosophy</cite>
+        </div>
+    </section>
+
+    <!-- Gallery / Instagram Feed Layout -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-kdj-gold uppercase tracking-widest font-semibold text-sm">Follow Us</span>
+                <h2 class="text-3xl font-serif font-bold text-kdj-dark mt-2">@KDJCream</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="group relative overflow-hidden h-64">
+                    <img src="https://images.unsplash.com/photo-1556228720-191500f40df5?q=80&w=800&auto=format&fit=crop" alt="Gallery 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden h-64">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=800&auto=format&fit=crop" alt="Gallery 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden h-64">
+                    <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=800&auto=format&fit=crop" alt="Gallery 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden h-64">
+                    <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?q=80&w=800&auto=format&fit=crop" alt="Gallery 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-20 bg-kdj-dark text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-serif mb-4">Join the Glow Club</h2>
+            <p class="text-gray-400 mb-8">Subscribe to receive exclusive offers, skincare tips, and 10% off your first order.</p>
+            <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-1 px-6 py-4 bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-kdj-gold transition-colors">
+                <button type="submit" class="bg-kdj-gold text-white px-8 py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-kdj-dark transition-all duration-300">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="text-3xl font-serif font-bold text-white mb-6 inline-block">KDJ<span class="text-kdj-gold">.</span></a>
+                    <p class="text-gray-400 max-w-sm">Premium skincare designed to bring out your natural inner beauty. Crafted with love and science.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-serif mb-6 text-kdj-gold">Quick Links</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white transition-colors">Shop</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-serif mb-6 text-kdj-gold">Contact</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-3"></i> 123 Beauty Lane, Colombo</li>
+                        <li><i class="fas fa-phone mr-3"></i> +94 77 123 4567</li>
+                        <li><i class="fas fa-envelope mr-3"></i> hello@kdjcream.com</li>
+                    </ul>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-kdj-gold transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-kdj-gold transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-kdj-gold transition-colors"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2024 KDJ Cream. All rights reserved. Designed with <i class="fas fa-heart text-kdj-gold"></i>.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Sticky Navbar effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.replace('bg-opacity-90', 'bg-opacity-100'); // If we were manipulating opacity directly
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
